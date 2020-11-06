@@ -7,3 +7,4 @@ test('Area Square', () => {
 test('Area Triangle', () => {
     expect(calcAreaTriangle(4, 5)).toBe(10);
 })
+
