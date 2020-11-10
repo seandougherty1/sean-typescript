@@ -22,9 +22,30 @@ test('Binary tree in order', () => {
     myTreeOrder.add(19)
     myTreeOrder.add(21)
     myTreeOrder.add(7);
-    [].forEach(x => myTreeOrder.add)
+    
+    let inOrderResults: number[] = []
+    traverseInOrder(myTreeOrder, x => inOrderResults.push(x))
+    expect(inOrderResults).toEqual([6,7,9,13,19,21]);
 
-    expect(myTreeOrder.contains(9)).toBeTruthy();
-    expect(myTreeOrder.contains(17)).toBeFalsy();
+    let preOrderResults: number[] = []
+    traverseInOrder(myTreeOrder, x => preOrderResults.push(x))
+    expect(preOrderResults).toEqual([6,9,13,19,21,7]);
+
+
 })
 
+
+test('Binary tree in order', () => {
+    let myTreePreOrder = new BinaryTree<number>((a,b) => a - b);
+    myTreePreOrder.add(6)
+    myTreePreOrder.add(9)
+    myTreePreOrder.add(13)
+    myTreePreOrder.add(19)
+    myTreePreOrder.add(21)
+    myTreePreOrder.add(7);
+    [].forEach(x => myTreePreOrder.add)
+
+    expect(myTreePreOrder.contains(9)).toBeTruthy();
+    expect(myTreePreOrder.contains(17)).toBeFalsy();
+    expect(myTreePreOrder.contains(13)).toBeTruthy();
+})
