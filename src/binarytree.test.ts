@@ -3,7 +3,7 @@ import traverseInOrder from "comp-sci-maths-lib/dist/algorithms/binaryTreeTraver
 import traversePostOrder from "comp-sci-maths-lib/dist/algorithms/binaryTreeTraversal/traversePostOrder";
 import traversePreOrder from "comp-sci-maths-lib/dist/algorithms/binaryTreeTraversal/traversePreOrder"
 test('Binary tree', () => {
-    let myTree = new BinaryTree<number>((a,b) => a - b);
+    const myTree = new BinaryTree<number>((a,b) => a - b);
     myTree.add(6)
     myTree.add(9)
     myTree.add(7);
@@ -15,19 +15,19 @@ test('Binary tree', () => {
 
 
 test('Binary tree in order', () => {
-    let myTreeOrder = new BinaryTree<number>((a,b) => a - b);
+    const myTreeOrder = new BinaryTree<number>((a,b) => a - b);
     myTreeOrder.add(6)
     myTreeOrder.add(9)
     myTreeOrder.add(13)
     myTreeOrder.add(19)
     myTreeOrder.add(21)
     myTreeOrder.add(7);
-    
-    let inOrderResults: number[] = []
+
+    const inOrderResults: number[] = []
     traverseInOrder(myTreeOrder, x => inOrderResults.push(x))
     expect(inOrderResults).toEqual([6,7,9,13,19,21]);
 
-    let preOrderResults: number[] = []
+    const preOrderResults: number[] = []
     traverseInOrder(myTreeOrder, x => preOrderResults.push(x))
     expect(preOrderResults).toEqual([6,9,13,19,21,7]);
 
@@ -36,7 +36,7 @@ test('Binary tree in order', () => {
 
 
 test('Binary tree in order', () => {
-    let myTreePreOrder = new BinaryTree<number>((a,b) => a - b);
+    const myTreePreOrder = new BinaryTree<number>((a,b) => a - b);
     myTreePreOrder.add(6)
     myTreePreOrder.add(9)
     myTreePreOrder.add(13)
