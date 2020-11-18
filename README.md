@@ -13,3 +13,5 @@ Upon running this command, TypeScript will build the JavaScript files, then run 
 ```bash 
 npm start
 ```
+
+#This is Sean's github repo for school work in typescript
