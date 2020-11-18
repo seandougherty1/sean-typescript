@@ -35,6 +35,7 @@ var myGraph = new dist_1.SimpleStringGraph();
 myGraph.addLink('A', 'B');
 myGraph.addLink('B', 'C');
 myGraph.addLink('A', 'D');
+myGraph.addLink('C', 'D');
 var dfs = [];
 dist_1.depthFirstSearch(myGraph, common_1.getStringVertex('A'), function (x) { return dfs.push(x.value); });
 simpleLogger.info(dfs);

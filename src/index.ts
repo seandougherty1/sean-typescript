@@ -21,6 +21,7 @@ const myGraph = new SimpleStringGraph();
 myGraph.addLink('A', 'B')
 myGraph.addLink('B', 'C')
 myGraph.addLink('A', 'D')
+myGraph.addLink('C', 'D')
 
 const dfs: string[] = []
 depthFirstSearch(myGraph,
