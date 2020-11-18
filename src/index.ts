@@ -13,7 +13,7 @@ function sayHello(name: string): void {
 
 sayHello('Mr Sharp')
 
-import {SimpleStringGraph, depthFirstSearch}
+import {SimpleStringGraph, depthFirstSearch, breadthFirstSearch}
     from "comp-sci-maths-lib/dist/";
 import { getStringVertex } from "comp-sci-maths-lib/dist/common";
 
@@ -27,4 +27,8 @@ const dfs: string[] = []
 depthFirstSearch(myGraph,
     getStringVertex('A'), x => dfs.push(x.value));
 
-simpleLogger.info(dfs);
+simpleLogger.info('DFS:' + dfs);
+
+let bfs: string[] = []
+breadthFirstSearch(myGraph, getStringVertex('B'), x => bfs.push(x.value));
+simpleLogger.info('BFS:' + bfs);
