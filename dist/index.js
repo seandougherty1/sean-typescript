@@ -38,5 +38,8 @@ myGraph.addLink('A', 'D');
 myGraph.addLink('C', 'D');
 var dfs = [];
 dist_1.depthFirstSearch(myGraph, common_1.getStringVertex('A'), function (x) { return dfs.push(x.value); });
-simpleLogger.info(dfs);
+simpleLogger.info('DFS:' + dfs);
+var bfs = [];
+dist_1.breadthFirstSearch(myGraph, common_1.getStringVertex('B'), function (x) { return bfs.push(x.value); });
+simpleLogger.info('BFS:' + bfs);
 //# sourceMappingURL=index.js.map
