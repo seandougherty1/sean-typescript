@@ -29,6 +29,8 @@ depthFirstSearch(myGraph,
 
 simpleLogger.info('DFS:' + dfs);
 
-const bfs: string[] = []
+let bfs: string[] = []
 breadthFirstSearch(myGraph, getStringVertex('B'), x => bfs.push(x.value));
 simpleLogger.info('BFS:' + bfs);
+
+
